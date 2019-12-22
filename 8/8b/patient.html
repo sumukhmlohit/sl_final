@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pdet" onmouseover=patient()>Patient details</p>
+    <p id="pdet1" hidden></p>
+    <br>
+    <p id="hdet" onmouseover=hospital()>Hospital details</p>
+    <p id="hdet1"></p>
+
+    <script>
+        function patient(){
+        pat={'name':'Mahesh','aadhaar':'12345678910','lab-tests':['Vit B2','Calcium','Vit D']};
+        pats=JSON.stringify(pat);
+        pdet1.removeAttribute('hidden');
+        document.getElementById("pdet1").innerHTML=pats;
+       
+        }
+        function hospital(){
+        hos={'name':'Ramaiah','location':'New BEL Road'};
+        hoss=JSON.stringify(hos);
+        
+        document.getElementById("hdet1").innerHTML=hoss;
+        }
+    </script>
+    <style>
+        p{
+            background-color:white;
+        }
+        #pdet:hover{
+            background-color:aqua;
+        }
+    </style>
+</body>
+</html>

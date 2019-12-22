@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select name="item" id="item">
+        <option value="50">Item1 , Price:50</option>
+        <option value="100">Item2, Price:!00</option>
+        <option value="150">Item3, Price: 150</option>
+    </select>
+    <br>
+    <p>Enter no of items</p>
+    <input type="number" name="" id="ino">
+    <br><br>
+    <label>Total cost:</label>
+    <label id="tcost" value=""></label>
+    <br><br>
+    <input type="submit" value="SUBMIT" onclick="cost()"><br>
+    <br>
+    <input type="button" value="PAY" placeholder="PAY" onclick="paid()">
+    <br>
+   
+
+    <script>
+        function cost()
+        {
+        document.getElementById('tcost').innerHTML=(+document.getElementById('ino').value)*(+document.getElementById('item').value);
+        document.getElementById('tcost').value=(+document.getElementById('ino').value)*(+document.getElementById('item').value);
+        }
+        function paid()
+        {  
+           window.alert("Item paid and "+"Total cost is"+(+document.getElementById("tcost").value))
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<table border=19>
+    <th>
+        <td><b>Author name</b>
+        </td>
+        <td><b>Author native country</b>
+        </td>
+        <td><b>Author story title</b>
+        </td>
+        <td><b>Author pulication year</b>
+        </td>
+    </th>
+
+    <tr>
+        <p id="a1"></p>
+        <td id="a1name"> </td>
+        <td id="a1country"></td>
+        <td id="a1title"> </td>
+        <td id="a1year"> </td>
+    </tr>
+
+    <tr>
+        <p id="a2"></p>
+        <td id="a2name"> </td>
+        <td id="a2country"></td>
+        <td id="a2title"> </td>
+        <td id="a2year"> </td>
+    </tr>
+</table>
+        <p id="a3"></p> 
+        <p id="a3name"> </p>
+        <p id="a3country"></p>
+        <p id="a3title"> </p>
+        <p id="a3year"> </p>
+        <p id="a4"></p>
+        <p id="a4name"> </p>
+        <p id="a4country"></p>
+        <p id="a4title"> </p>
+        <p id="a4year"> </p>
+
+
+        <script>
+        obj=[{'name':'Manish','country':'India','title':'Pirates of Nicobar','year':'2016'},{'name':'Steve','country':'France','title':'European Times','year':'2011'},{'name':'Venki','country':'India','title':'Medeival India','year':'2005'},{'name':'Chris','country':'Jamaica','title':'Pirates of Carribean','year':'2017'}]
+
+        for(i=1;i<=2;i++)
+        {
+            document.getElementById('a'+i+'name').innerHTML=obj[i-1].name;
+            document.getElementById('a'+i+'country').innerHTML=obj[i-1].country;
+            document.getElementById('a'+i+'title').innerHTML=obj[i-1].title;
+            document.getElementById('a'+i+'year').innerHTML+=obj[i-1].year;
+        }
+        for(i=3;i<=4;i++){
+         
+        document.getElementById('a'+i).innerHTML=obj[i-1].name+" ";
+        document.getElementById('a'+i).innerHTML+=obj[i-1].country+" ";   
+        document.getElementById('a'+i).innerHTML+=obj[i-1].title+" ";
+        document.getElementById('a'+i).innerHTML+=obj[i-1].year+" ";
+        }
+        </script>
+
+</body>
+</html>
