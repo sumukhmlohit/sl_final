@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table border=5>
+        <row span="3">
+        <th>
+            Item
+            <td>Quantity:</td>
+            <td>Price:</td>
+        </th>
+      
+            {%for item in cart %}
+            <tr>
+            <td>
+                {{item["name"]}}
+            </td>
+            <td>
+                {{item["quantity"]}}
+            </td>
+            <td>
+                    {{item["price"]}}
+            </td>
+        </tr>
+            {% endfor %}
+        
+    </table>
+
+    <label for="">Total amount:</label>
+    <label for="">{{amount}}</label>
+
+    <a href="{{url_for('store')}}">Continue shopping</a>
+    <a href="{{url_for('cart')}}">View cart</a>
+</body>
+</html>
